@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fade-in {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+
+.fade-slow {
+  opacity: 0;
+  animation: fadeInSlow 1s ease-in-out forwards;
+}
+
+@keyframes fadeInSlow {
+  to {
+    opacity: 1;
+  }
+}

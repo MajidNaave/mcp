@@ -96,7 +96,7 @@ const handleSubmit = async (e) => {
        setIsSubmitting(true);
 
       try {
-        const response = await fetch("http://localhost:5000/appointment", {
+        const response = await fetch("https://mcpbackend-chi.vercel.app/appointment", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -535,8 +535,8 @@ const handleSubmit = async (e) => {
       <footer id="contact" className="bg-blue-900 text-white py-6 px-4 text-center ">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-semibold mb-6">Contact Us</h2>
-          <p className="mb-4">You can reach out to us via email at <a href="mailto:info@mcpadvisory.com" className="text-blue-600 underline">info@mcpadvisory.com</a></p>
-          <p>Phone: +233 123 456 789</p>
+          <p className="mb-4">You can reach out to us via email at <a href="mailto:mundoafricacapital@gmail.com" className="text-blue-600 underline">mundoafricacapital@gmail.com</a></p>
+          <p>Phone: +233 248253595</p>
         </div>
         <p className="text-sm sm:text-base">
           &copy; {new Date().getFullYear()} MCP Advisory. All rights reserved.
