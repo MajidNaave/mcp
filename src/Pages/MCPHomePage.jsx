@@ -334,7 +334,7 @@ const handleSubmit = async (e) => {
 
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col sm:flex-row justify-center items-center gap-3 max-w-xl mx-auto"
+      className="flex flex-col md:flex-row justify-center items-center gap-3 w-full max-w-xl mx-auto px-2"
     >
       <input
         type="email"
@@ -465,7 +465,7 @@ const handleSubmit = async (e) => {
       <div className="flex-1 overflow-hidden">
         <div
           key={currentStartIndex} // This forces React to treat each group as a new render
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-4 transition-opacity duration-500 ease-in-out opacity-100 animate-fade"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 transition-opacity duration-500 ease-in-out opacity-100 animate-fade"
         >
           {experts
             .slice(currentStartIndex, currentStartIndex + 3)
@@ -495,9 +495,10 @@ const handleSubmit = async (e) => {
 
       {/* Right Arrow */}
       <button
-        onClick={() =>
-          setCurrentStartIndex((prev) => Math.min(prev + 3, experts.length - 3))
-        }
+        onClick={() => setCurrentStartIndex((prev) => 
+           Math.max(prev - (window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3), 0)
+)}
+
         className="z-20 bg-white p-3 rounded-full shadow-md hover:bg-blue-100 transition mx-4"
         aria-label="Next"
       >

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@import "tailwindcss";
+
 html {
   scroll-behavior: smooth;
 }
@@ -19,7 +19,6 @@ html {
 .animate-fade-in {
   animation: fade-in 0.3s ease-out;
 }
-
 
 .fade-slow {
   opacity: 0;
